@@ -1,0 +1,320 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+/* Styling tambahan untuk dropdown */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: ■#ffffff;
+}
+
+.navbar-nav {
+    margin-right: 20px; /* Atur jaraknya sesuai keinginan */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.25rem; /* Sesuaikan ukuran teks */
+    margin-right: 20px; /* Tambahkan jarak antar item */
+}
+
+.navbar-brand {
+    margin-left: 30px; /* Atur jaraknya sesuai keinginan */
+    padding: 0; /* Menghilangkan padding tambahan agar navbar tidak bertambah tinggi */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.navbar-brand img {
+    height: 60px; /* Atur tinggi logo sesuai keinginan */
+    width: auto; /* Menjaga proporsi logo */
+}
+
+.event-cards:hover {
+    transform: scale(1.05);
+}
+
+.jumbotron-custom {
+    height: 100vh; /* Full-screen height */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: url('img/Jumbotron.png') no-repeat center center/cover; /* Background image */
+    position: relative;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+}
+
+.jumbotron-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: red;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid red;
+    animation: caret-blink 0.5s step-end infinite;
+    margin: 0;
+}
+
+.btn-custom2 {
+    font-size: 1.2rem;
+    background-color: #f41515;
+    border: none;
+    border-radius: 0;
+}
+
+.jumbotron-content p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid red;
+    animation: caret-blink 0.5s step-end infinite;
+    margin: 0;
+}
+
+.jumbotron-content p {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 1rem;
+    border-right: none;
+    font-weight: 500;
+}
+
+@keyframes caret-blink {
+    50% {
+        border-color: transparent;
+    }
+}
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0; /* Pindah ke pojok atas */
+    left: 0;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+    z-index: 1000;
+    background-color: #fbda21;
+}
+
+/* Animasi teks berjalan */
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Card Styling */
+.card {
+    width: 100%;
+    transition: transform 0.3s ease; /* Add smooth transition on hover */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.03); /* Scale up card on hover */
+}
+
+/* Card Wrapper */
+.card-wrapper {
+    display: flex; /* Cards in a horizontal row */
+    transition: transform 0.3s ease; /* Smooth transition for scrolling */
+}
+
+.text-events {
+    font-size: 2rem; /* Sesuaikan ukuran font sesuai keinginan */
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
+    font-weight: 800; /* Berat font Black */
+}
+
+.text-center {
+    font-size: 3rem; /* Sesuaikan ukuran font sesuai keinginan */
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
+    font-weight: 800; /* Berat font Black */
+}
+
+/* Memastikan tombol di kanan dan menggunakan font Montserrat dengan bold */
+.btn-watch {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    position: center;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #f41515;
+    font-size: 12px;
+    border-radius: 0%;
+}
+.card {
+    position: relative;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Sesuaikan ukuran font sesuai keinginan */
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
+    font-weight: 800; /* Berat font Black */
+}
+
+.card-text { 
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
+    font-weight: 500; /* Berat font Black */
+}
+
+.card-body {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body .name {
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-body .nickname {
+    font-size: 1.5rem;
+    color: #f41515;
+}
+
+.btn-custom2 {
+    font-size: 1.2rem;
+    background-color: #f41515;
+    border: none;
+    border-radius: 0;
+}
+
+/* Styling untuk Baris Ikon */
+.row.text-center .col i {
+    font-size: 2.5rem; /* Ukuran ikon lebih kecil dari sebelumnya */
+    color: #333; /* Warna ikon */
+    transition: transform 0.2s ease; /* Animasi halus saat hover */
+}
+
+.row.text-center .col i:hover {
+    transform: scale(1.1); /* Ikon sedikit membesar saat dihover */
+    color: #f41515; /* Ubah warna ikon saat dihover */
+}
+
+.row.text-center .col p {
+    font-size: 1rem; /* Ukuran teks lebih kecil */
+    font-weight: 600; /* Semi-bold */
+    color: #555; /* Warna teks */
+    margin-top: 0.5rem; /* Jarak antara ikon dan teks */
+}
+
+/* Styling tambahan untuk modal header */
+.modal-header h5 {
+    font-size: 1.5rem; /* Ukuran judul modal */
+    font-weight: 600; /* Semi-bold */
+    color: #333; /* Warna teks */
+}
+
+
+.btn-custom {
+    font-size: 1rem; /* Sesuaikan ukuran font sesuai keinginan */
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
+    font-weight: 800; /* Berat font Black */
+    border-radius: 0; /* Menghilangkan lengkungan pada sudut */
+    padding: 10px 20px; /* Opsional, untuk menyesuaikan ukuran tombol */
+    font-weight: bold; /* Opsional, untuk tampilan yang lebih tegas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animasi */
+    background-color: #f41515;
+    color: #fff;
+}
+
+.container2 {
+    background-image: url(img/bg.png);
+    padding: 3rem 0;
+
+}
+
+html {
+    scroll-behavior: smooth; /* Efek scroll yang halus */
+}
+
+/* Styling Footer */
+footer {
+    width: 100vw; /* Memastikan footer penuh sepanjang layar */
+    background-color: #343a40; /* Warna latar belakang */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Pastikan footer-menu dan footer-social berada di tengah */
+.footer-menu, .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Styling Link di Footer */
+.footer-link {
+    color: #f41515;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
+
+.footer-link:hover {
+    color: #f41515;
+}
+
+/* Styling Ikon Sosial Media di Footer */
+.footer-social .social-icon {
+    color: #f41515;
+    font-size: 1.2rem;
+    margin: 0 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social .social-icon:hover {
+    color: #f1c40f;
+}
+
+/* Divider di Footer */
+.footer hr {
+    border-top: 1px solid #d1a22b;
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* Default styling untuk elemen */
+.fade-effect {
+    opacity: 0; /* Elemen tidak terlihat secara default */
+    transform: translateY(40px); /* Elemen sedikit bergerak ke bawah */
+    transition: opacity 1s ease, transform 1s ease; /* Efek transisi */
+}
+
+/* Saat elemen muncul di viewport */
+.fade-effect.visible {
+    opacity: 1; /* Elemen terlihat sepenuhnya */
+    transform: translateY(0); /* Elemen berada pada posisi awal */
+}
