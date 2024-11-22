@@ -9,12 +9,6 @@ body {
     color: ■#ffffff;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1030; /* Pastikan navbar tetap di atas konten lainnya */
-}
-
 .navbar-nav {
     margin-right: 20px; /* Atur jaraknya sesuai keinginan */
 }
@@ -240,6 +234,11 @@ body {
     color: #333; /* Warna teks */
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* Pastikan navbar tetap di atas konten lainnya */
+}
 
 .btn-custom {
     font-size: 1rem; /* Sesuaikan ukuran font sesuai keinginan */
@@ -323,4 +322,19 @@ footer {
 .fade-effect.visible {
     opacity: 1; /* Elemen terlihat sepenuhnya */
     transform: translateY(0); /* Elemen berada pada posisi awal */
+}
+
+.btn-lg {
+    border-radius: 0%;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 28px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* 600 untuk Montserrat Medium Bold */
+    text-align: center;
+    margin: auto; /* Untuk memastikan tombol berada di tengah */
+    margin-top: 20px;
 }
