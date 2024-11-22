@@ -69,12 +69,12 @@
             <!-- Fullstack Developer Icon -->
             <div class="col">
                 <i class="bi bi-code-slash" style="font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#fullstackModal"></i>
-                <p>Fullstack Developer</p>
+                <p>Fullstack Develop</p>
             </div>
             <!-- UI/UX Designer Icon -->
             <div class="col">
                 <i class="bi bi-vector-pen" style="font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#uiuxModal"></i>
-                <p>UI/UX Designer</p>
+                <p>UI/UX Design</p>
             </div>
             <!-- Content Icon -->
             <div class="col">
@@ -278,6 +278,140 @@
     </div>
 </div>
     </div>
+
+    
+<!-- Button to trigger modal -->
+<button type="button" class="btn btn-warning btn-lg fade-effect" data-bs-toggle="modal" data-bs-target="#contactModal">
+    BOOK ME
+</button>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Pilih Jenis Kerja Sama!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="contact-form1">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="user_name" placeholder="Masukkan nama" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="user_email" placeholder="Masukkan email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Job</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="Graphic" id="graphicDesign">
+                <label class="form-check-label" for="graphicDesign">Graphic Design</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="Graphic" id="uiux">
+                <label class="form-check-label" for="uiux">UI/UX Design</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="FrontEnd" id="frontend">
+                <label class="form-check-label" for="frontend">Frontend Develop</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="BackEnd" id="backend">
+                <label class="form-check-label" for="backend">Backend Develop</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="Video" id="video">
+                <label class="form-check-label" for="video">Video Editing</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="user_talent" value="Creative" id="creative">
+                <label class="form-check-label" for="creative">Creative Project</label>
+            </div>
+            </div>
+          <div class="mb-3">
+            <label for="jobDescription" class="form-label">Bentuk Kerja Sama</label>
+            <select class="form-select" id="jobDescription" name="job_description" required>
+                <option selected>Personal</option>
+                <option selected>Brand</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Masukkan Nomor Telp" required>
+        </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning btn-baru">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your user ID
+    emailjs.init("RRB_wzGgpjd22qTIx");
+
+    // Form submission event listener
+    document.getElementById("contact-form1").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Send form data to EmailJS
+        emailjs.sendForm("service_mbcax7m", "template_mkwviva", this)
+            .then(function(response) {
+                console.log("SUCCESS!", response.status, response.text);
+                
+                // Use SweetAlert2 for a success message
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Book Anda Berhasil!',
+                    text: 'Terima kasih! Akan kami waro segera!',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementById("contact-form1").reset(); // Reset form fields
+                    }
+                });
+
+                // Explicitly hide the modal using Bootstrap's JavaScript API
+                const modalElement = document.getElementById("contactModal");
+                const modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
+                modalInstance.hide(); // Close the modal
+
+                // Remove the overlay manually after modal closes
+                document.querySelectorAll('.modal-backdrop').forEach((backdrop) => {
+                    backdrop.remove();
+                });
+
+            }, function(error) {
+                console.log("FAILED...", error);
+                
+                // Use SweetAlert2 for an error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Pengiriman Pesan Gagal',
+                    text: 'Silakan coba lagi nanti.',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'OK'
+                });
+            });
+    });
+
+    document.getElementById("contactModal").addEventListener("hidden.bs.modal", function () {
+    document.body.style.overflow = 'auto'; // Mengembalikan scroll ke normal
+    document.querySelectorAll('.modal-backdrop').forEach((backdrop) => {
+        backdrop.remove();
+    });
+});
+</script>
+
+
 
     <!-- Cards Section -->
     <div class="container2 px-4 fade-effect my-5">
