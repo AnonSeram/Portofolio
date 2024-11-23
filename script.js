@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const text1 = "Hi,";
     const text2 = "My name is";
     const text3 = "Abduh";
-    const text4 = "Build your website and develop your creativity with me";
+    const text4 = "Build your idea and develop your creativity with me";
 
     let i = 0;
 
