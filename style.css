@@ -338,3 +338,93 @@ footer {
     margin: auto; /* Untuk memastikan tombol berada di tengah */
     margin-top: 20px;
 }
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/* Form Header */
+h1 {
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.01);
+}
+
+/* Input and Textarea */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Submit Button */
+button#submit-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button#submit-btn:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    button#submit-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
