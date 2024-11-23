@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const text1 = "Hi,";
     const text2 = "My name is";
     const text3 = "Abduh";
-    const text4 = "Build your idea and develop your creativity with me";
+    const text4 = "Build your website and develop your creativity with me";
 
     let i = 0;
 
@@ -95,7 +95,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       title: 'Pesan Gagal Diwaro!',
       text: 'Silakan coba lagi nanti.',
       confirmButtonColor: '#d33',
-      confirmButtonText: 'OK'
+      confirmButtonText: 'OK' 
     });
   });
 });
@@ -119,3 +119,17 @@ window.addEventListener('scroll', handleScroll);
 
 // Jalankan fungsi sekali untuk memastikan efek fade diterapkan saat pertama kali dimuat
 document.addEventListener('DOMContentLoaded', handleScroll);
+
+//AOS
+AOS.init();
+
+//Mouse Follow Effect
+document.addEventListener('mousemove', function(e) {
+  const cursor = document.createElement('div');
+  cursor.className = 'mouse-effect';
+  cursor.style.left = `${e.pageX}px`;
+  cursor.style.top = `${e.pageY}px`;
+  document.body.appendChild(cursor);
+  setTimeout(() => cursor.remove(), 1000);
+});
+
